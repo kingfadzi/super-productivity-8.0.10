@@ -1,0 +1,2 @@
+(()=>{"use strict";let o;addEventListener("message",({data:t})=>{l(t)});const l=t=>{o&&(o(),o=void 0),t&&t.length&&(o=((t,n)=>{let e;const s=()=>{e=setTimeout(s,1e4),t.call(null)};return e=setTimeout(s,1e4),()=>{clearTimeout(e)}})(()=>{const n=c(t);if(n.length){const e=n[0],s="TASK"===e.type?n.filter(i=>"TASK"===i.type):[e];postMessage(s),console.log("Worker postMessage",s)}}))},c=t=>{const n=Date.now();return t.filter(e=>e.remindAt<n).sort((e,s)=>e.remindAt-s.remindAt)}})();
+//# sourceMappingURL=reminder.d44ab4085f820754.js.map
